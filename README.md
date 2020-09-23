@@ -2,13 +2,16 @@
 
 ### 프로젝트 목적
 
+    react + firebase를 이용하여 트위터 사이트의 동작방식을 구현해본다.
+    CRUD(Create, Read, Update, Delete)구현
+
 ---
 
 ### 주요 기능
 
----
-
-### 실행 결과
+    로그인, 로그아웃
+    트윗 작성, 수정, 삭제
+    프로필 관리
 
 ---
 
@@ -25,7 +28,7 @@
 - Cloud storage
 
   - cloud storage는 aws의 s3과 비슷하다.
-    기본적으로 업로드의 기능(사진을 업로드)
+    기본적으로 업로드의 기능(사진 포함)
 
 - Hosting
 
@@ -38,10 +41,10 @@
 
 ### 진행하는 과정
 
-#### `<a href="./src/components/App.js"> App.js</a>`
+#### App.js
 
 1. 유저의 상태가 변화하면 그 변화된 정보로 유저를 변경해준다. (update)
-2. `<AppRouter/>` 컴포넌트는 3개의 인자값을 가지게 된다.
+2. `<AppRouter>` 컴포넌트는 3개의 인자값을 가지게 된다.
    - refreshUser : 유저의 정보를 갱신해주는 함수
    - isLoggedIn : 로그인이 되었는지 판별하기 위한 값
    - userObj : 유저의 정보를 담고 있는 객체 (state 값)
@@ -50,12 +53,12 @@
 
 1. isLoggedIn 이 true면
 
-- Navigation 컴포넌트 실행
+- `<Navigation>` 컴포넌트 실행
 - 홈 아이콘을 클릭하면 Home 컴포넌트 실행 , 프로필 아이콘을 클릭하면 Profile 컴포넌트 실행
 
 2. isLoggedIn 이 false면
 
-- Auth 컴포넌트를 실행
+- `<Auth>` 컴포넌트를 실행
 
 #### Navigation.js
 
@@ -82,8 +85,8 @@
 #### Home.js [메인 화면]
 
 1. 트윗을 작성하거나 삭제한다
-2. NweetFactory 컴포넌트 실행
-3. Nweet 컴포넌트 실행
+2. `<NweetFactory>` 컴포넌트 실행
+3. `<Nweet>` 컴포넌트 실행
 
 #### Profile.js [프로필 화면]
 
