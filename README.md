@@ -38,7 +38,7 @@
 
 ### 진행하는 과정
 
-#### App.js
+#### `<a href="./src/components/App.js"> App.js</a>`
 
 1. 유저의 상태가 변화하면 그 변화된 정보로 유저를 변경해준다. (update)
 2. `<AppRouter/>` 컴포넌트는 3개의 인자값을 가지게 된다.
