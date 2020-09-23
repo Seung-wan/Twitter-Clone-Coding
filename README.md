@@ -1,18 +1,18 @@
 # CRUD Twitter Clone Coding
 
-프로젝트 목적:
+### 프로젝트 목적
 
 ---
 
-주요 기능:
+### 주요 기능
 
 ---
 
-실행 결과:
+### 실행 결과
 
 ---
 
-개념 정리
+### 개념 정리
 
 - Firebase
 
@@ -36,4 +36,67 @@
 
 ---
 
-## 진행하는 과정
+### 진행하는 과정
+
+#### App.js
+
+1. 유저의 상태가 변화하면 그 변화된 정보로 유저를 변경해준다. (update)
+2. `<AppRouter/>` 컴포넌트는 3개의 인자값을 가지게 된다.
+   - refreshUser : 유저의 정보를 갱신해주는 함수
+   - isLoggedIn : 로그인이 되었는지 판별하기 위한 값
+   - userObj : 유저의 정보를 담고 있는 객체 (state 값)
+
+#### Router.js
+
+1. isLoggedIn 이 true면
+
+- Navigation 컴포넌트 실행
+- 홈 아이콘을 클릭하면 Home 컴포넌트 실행 , 프로필 아이콘을 클릭하면 Profile 컴포넌트 실행
+
+2. isLoggedIn 이 false면
+
+- Auth 컴포넌트를 실행
+
+#### Navigation.js
+
+1. 홈 아이콘과 프로필 아이콘을 작성한다 (FontAwesomeIcon)
+
+#### NweetFactory.js
+
+1. 텍스트와 사진을 함께 작성할 수 있게 틀을 작성한다
+
+### Nweet.js
+
+1. 작성된 트윗들을 보여주고 그 트윗을 수정할 수 있게 해준다.
+
+#### Auth.js [로그인 화면]
+
+1. 이메일, 비밀번호로 로그인
+
+- 계정을 생성하여 Firebase에 저장할 수 있다
+- 이메일이나 비밀번호에 에러가 있으면 에러메세지가 표시된다
+
+2. Google 아이디를 이용하여 로그인
+3. Github 아이디를 이용하여 로그인
+
+#### Home.js [메인 화면]
+
+1. 트윗을 작성하거나 삭제한다
+2. NweetFactory 컴포넌트 실행
+3. Nweet 컴포넌트 실행
+
+#### Profile.js [프로필 화면]
+
+1. 프로필을 수정할 수 있고 로그아웃 기능이 있다.
+
+---
+
+#### Fbase.js [Firebase 설정]
+
+### firebase 설정들을 모아놓은 컴포넌트
+
+- firebaseConfig
+- firebase
+- firebase.auth()
+- firebase.firestore()
+- firebase.storage()

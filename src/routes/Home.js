@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { dbService, storageService } from "fBase";
 import Nweet from "components/Nweet";
-import NweetFactroy from "components/NweetFactory";
+import NweetFactory from "components/NweetFactory";
 
 const Home = ({ userObj }) => {
   const [nweets, setNweets] = useState([]);
@@ -14,10 +14,11 @@ const Home = ({ userObj }) => {
       }));
       setNweets(nweetArray);
     });
-  }, []);
+  });
+
   return (
     <div className="container">
-      <NweetFactroy userObj={userObj} />
+      <NweetFactory userObj={userObj} />
       <div style={{ marginTop: 30 }}>
         {nweets.map((nweet) => (
           <Nweet
