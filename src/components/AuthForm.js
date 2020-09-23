@@ -10,6 +10,7 @@ const AuthForm = () => {
     const {
       target: { name, value },
     } = event;
+
     if (name === "email") {
       setEmail(value);
     } else if (name === "password") {

@@ -13,6 +13,7 @@ const Auth = () => {
     const {
       target: { name },
     } = event;
+
     let provider;
     if (name === "google") {
       provider = new firebaseInstance.auth.GoogleAuthProvider();
