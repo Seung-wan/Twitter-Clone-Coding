@@ -94,9 +94,9 @@
 
 ---
 
-#### Fbase.js [Firebase 설정]
+### Fbase.js [Firebase 설정]
 
-### firebase 설정들을 모아놓은 컴포넌트
+#### firebase 설정들을 모아놓은 컴포넌트
 
 - firebaseConfig
 - firebase
